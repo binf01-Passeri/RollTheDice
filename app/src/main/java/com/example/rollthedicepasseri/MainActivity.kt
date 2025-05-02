@@ -33,8 +33,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,
                 "Gioca con noi!",
                 Toast.LENGTH_LONG).show()
-            
-        }
 
+            rollDice()
+            Log.d(TAG, "click del bottone")
+        }
+    }
+
+    private fun rollDice(): Int{
+        return (1..6).random()
     }
 }
