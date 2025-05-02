@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/dices" />
 
     <Button
-        android:id="@+id/idResult"
+        android:id="@+id/idRoll"
         android:layout_width="126dp"
         android:layout_height="62dp"
         android:text="Lancia"

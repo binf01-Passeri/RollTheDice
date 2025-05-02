@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
     private lateinit var txtTitle : TextView
     private lateinit var imgDice : ImageView
-    private lateinit var btnResult : Button
+    private lateinit var btnRoll : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         txtTitle = findViewById<TextView>(R.id.idTitle)
         imgDice = findViewById<ImageView>(R.id.idDice)
-        btnResult = findViewById<Button>(R.id.idResult)
+        btnRoll = findViewById<Button>(R.id.idRoll)
 
-        btnResult.setOnClickListener {
+        btnRoll.setOnClickListener {
             Toast.makeText(applicationContext,
                 "Gioca con noi!",
                 Toast.LENGTH_LONG).show()

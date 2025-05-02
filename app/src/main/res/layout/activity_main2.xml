@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/idResult"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
+        android:layout_width="144dp"
+        android:layout_height="65dp"
         android:text="Risultato"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
