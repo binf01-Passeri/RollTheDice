@@ -33,19 +33,13 @@ class MainActivity : AppCompatActivity() {
                 "Gioca con noi!",
                 Toast.LENGTH_LONG).show()
 
-            val mioRandom = rollDice()
-            intent(mioRandom)
+            intent()
             Log.d(TAG, "click del bottone")
         }
     }
 
-    private fun rollDice(): Int{
-        return (1..6).random()
-    }
-
-    private fun intent(mioRandom: Int){
+    private fun intent(){
         val intent = Intent(this, MainActivity2::class.java)
-        intent.putExtra("NUMERO", mioRandom)
         startActivity(intent)
 
     }
