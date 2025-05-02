@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.util.Log
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +28,13 @@ class MainActivity : AppCompatActivity() {
         txtTitle = findViewById<TextView>(R.id.idTitle)
         imgDice = findViewById<ImageView>(R.id.idDice)
         btnRoll = findViewById<Button>(R.id.idRoll)
+
+        btnRoll.setOnClickListener {
+            Toast.makeText(applicationContext,
+                "Gioca con noi!",
+                Toast.LENGTH_LONG).show()
+            
+        }
 
     }
 }
