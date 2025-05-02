@@ -44,5 +44,13 @@ class MainActivity2 : AppCompatActivity() {
         val randomNumber = (1..6).random()
         Log.d(TAG, "Lancio del dado: " + randomNumber.toString())
         txtNumber.text = randomNumber.toString()
+        val imgResources = when (randomNumber) {
+            1 -> R.drawable.dice_face_1
+            2 -> R.drawable.dice_face_2
+            3 -> R.drawable.dice_face_3
+            4 -> R.drawable.dice_face_4
+            5 -> R.drawable.dice_face_5
+            else -> {R.drawable.dice_face_6} }
+        imgDice.setImageResource(imgResources)
     }
 }
