@@ -5,10 +5,9 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -16,6 +15,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var txtNumber : TextView
     private lateinit var imgDice : ImageView
     private lateinit var btnRoll : Button
+    private val mioRandom = intent.getIntExtra("NUMERO", -1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +26,12 @@ class MainActivity2 : AppCompatActivity() {
 
         txtNumber = findViewById<TextView>(R.id.idNumber)
         imgDice = findViewById<ImageView>(R.id.idDice)
-        btnRoll = findViewById<Button>(R.id.idRoll)
+        btnRoll = findViewById<Button>(R.id.idResult)
 
-
+        btnRoll.setOnClickListener {
+            Toast.makeText(applicationContext,
+                "Visualizza il risultato!",
+                Toast.LENGTH_LONG).show()
+        }
     }
 }

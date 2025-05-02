@@ -7,8 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.util.Log
 import android.widget.Toast
 
@@ -17,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
     private lateinit var txtTitle : TextView
     private lateinit var imgDice : ImageView
-    private lateinit var btnRoll : Button
+    private lateinit var btnResult : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         txtTitle = findViewById<TextView>(R.id.idTitle)
         imgDice = findViewById<ImageView>(R.id.idDice)
-        btnRoll = findViewById<Button>(R.id.idRoll)
+        btnResult = findViewById<Button>(R.id.idResult)
 
-        btnRoll.setOnClickListener {
+        btnResult.setOnClickListener {
             Toast.makeText(applicationContext,
                 "Gioca con noi!",
                 Toast.LENGTH_LONG).show()
