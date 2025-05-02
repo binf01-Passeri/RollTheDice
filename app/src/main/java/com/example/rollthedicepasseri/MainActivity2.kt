@@ -8,6 +8,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
+
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -38,6 +40,9 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     private fun rollDice(){
-
+        Log.d(TAG, "Lancio del dado")
+        val randomNumber = (1..6).random()
+        Log.d(TAG, "Lancio del dado: " + randomNumber.toString())
+        txtNumber.text = randomNumber.toString()
     }
 }
