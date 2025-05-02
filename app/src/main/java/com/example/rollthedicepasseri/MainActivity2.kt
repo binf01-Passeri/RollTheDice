@@ -1,5 +1,6 @@
 package com.example.rollthedicepasseri
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -29,19 +30,19 @@ class MainActivity2 : AppCompatActivity() {
         imgDice = findViewById<ImageView>(R.id.idDice)
         btnResult = findViewById<Button>(R.id.idResult)
 
-        rollDice()
+        val randomNumber = rollDice()
 
         btnResult.setOnClickListener {
             Toast.makeText(applicationContext,
                 "Visualizza il risultato!",
                 Toast.LENGTH_LONG).show()
 
-
+            intent(randomNumber)
             Log.d(TAG, "click del bottone")
         }
     }
 
-    private fun rollDice(){
+    private fun rollDice(): Int{
         Log.d(TAG, "Lancio del dado")
         val randomNumber = (1..6).random()
         Log.d(TAG, "Lancio del dado: " + randomNumber.toString())
@@ -54,5 +55,12 @@ class MainActivity2 : AppCompatActivity() {
             5 -> R.drawable.dice_face_5
             else -> {R.drawable.dice_face_6} }
         imgDice.setImageResource(imgResources)
+        return randomNumber
+    }
+
+    private fun intent(randomNumber: Int){
+        val intent = Intent(this, MainActivity3::class.java)
+        startActivity(intent)
+
     }
 }
