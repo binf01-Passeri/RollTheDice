@@ -60,7 +60,7 @@ class MainActivity2 : AppCompatActivity() {
 
     private fun intent(randomNumber: Int){
         val intent = Intent(this, MainActivity3::class.java)
+        intent.putExtra("NUMERO", randomNumber)
         startActivity(intent)
-
     }
 }
