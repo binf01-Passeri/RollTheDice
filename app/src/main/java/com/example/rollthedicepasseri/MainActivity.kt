@@ -1,5 +1,6 @@
 package com.example.rollthedicepasseri
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -34,12 +35,20 @@ class MainActivity : AppCompatActivity() {
                 "Gioca con noi!",
                 Toast.LENGTH_LONG).show()
 
-            rollDice()
+            val mioRandom = rollDice()
+            intent(mioRandom)
             Log.d(TAG, "click del bottone")
         }
     }
 
     private fun rollDice(): Int{
         return (1..6).random()
+    }
+
+    private fun intent(mioRandom: Int){
+        val intent = Intent(this, MainActivity2::class.java)
+        intent.putExtra("NUMERO", mioRandom)
+        startActivity(intent)
+
     }
 }
