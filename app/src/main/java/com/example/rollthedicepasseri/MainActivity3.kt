@@ -21,6 +21,14 @@ class MainActivity3 : AppCompatActivity() {
         Log.d(TAG, "inflate fatto")
 
         txtTitle = findViewById<TextView>(R.id.idTitle)
+        val randomNumber = intent.getIntExtra("NUMERO", -1)
 
+        //Si vince se il numero è maggiore o uguale a 4
+        if(randomNumber >= 4){
+            txtTitle.text = "Hai Vinto!"
+        }
+        else{
+            txtTitle.text = "Hai perso"
+        }
     }
 }
