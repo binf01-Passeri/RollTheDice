@@ -29,12 +29,14 @@ class MainActivity2 : AppCompatActivity() {
         imgDice = findViewById<ImageView>(R.id.idDice)
         btnResult = findViewById<Button>(R.id.idResult)
 
+        rollDice()
+
         btnResult.setOnClickListener {
             Toast.makeText(applicationContext,
                 "Visualizza il risultato!",
                 Toast.LENGTH_LONG).show()
 
-            rollDice()
+
             Log.d(TAG, "click del bottone")
         }
     }
